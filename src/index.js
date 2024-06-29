@@ -1,10 +1,8 @@
+const express = require("express");
+const app = express();
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
-// Escucha las conexiones entrantes en el puerto configurado en la aplicación express
-app.listen(app.get("port"), () => {
-  console.log(`Server connected to port: ${process.env.port}`); // Imprime un mensaje indicando la dirección del servidor
-});
-
+app.listen(3000, () => console.log("Server ready on port 3000."));
 
 module.exports = app;
